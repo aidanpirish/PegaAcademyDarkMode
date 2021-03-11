@@ -1,0 +1,38 @@
+{
+  "name": "Getting Started Example",
+  "description": "Build an Extension!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "options_page": "options.html",
+  "background" : {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "default_icon": {
+    "16": "/images/horse.png",
+    "32": "/images/horse.png",
+    "48": "/images/horse.png",
+    "128": "/images/horse.png"
+  },
+  "icons": {
+    "16": "/images/horse.png",
+    "32": "/images/horse.png",
+    "48": "/images/horse.png",
+    "128": "/images/horse.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://academy.pega.com/topic/*"], 
+      "js": ["script.js"],
+      "css" : ["topic.css"]
+    },
+    {
+      "matches": ["https://academy.pega.com/challenge/*"], 
+      "js": ["challenge.js"],
+      "css" : ["challenge.css"]
+    }
+  ]
+}
