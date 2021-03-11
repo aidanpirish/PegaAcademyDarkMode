@@ -1,1 +1,1 @@
-# PegeAcademyDarkMode
+# PegaAcademyDarkMode
